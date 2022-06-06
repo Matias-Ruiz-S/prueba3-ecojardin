@@ -10,5 +10,5 @@ urlpatterns = [
     path('', contacto,name="contacto"),
     path('', flores,name="flores"),
     path('', macetero,name="macetero"),
-    path('', tierradehoja,name="tierradehoja")
+    path('', tierradehoja,name="tierradehoja"),
 ]
