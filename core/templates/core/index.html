@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | EcoJardín1</title>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <title>Home | EcoJardín</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'core/img/favicon.ico'%}">
     <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css'%}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
 </head>
@@ -19,7 +19,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a href="index.html">
-        <img src="img/logo.svg" alt="Maceteros, flores y tierra de hoja en EcoJardín" class="padding">
+        <img src="{% static 'core/img/logo.svg'%}" alt="Maceteros, flores y tierra de hoja en EcoJardín" class="padding">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -48,7 +48,7 @@
   </section>
   <section id="flor">
   <div class="img">
-    <img src="img/maceta.jpg" height="100px">
+    <img src="{% static 'core/img/maceta.jpg'%}" height="100px">
   </div>
 </section>
   <section id="parrafo">
@@ -70,7 +70,7 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <a href="tierradehoja.html">
-          <img src="img/slidertierra.jpg" class="d-block w-100" alt="Tierra de hoja">
+          <img src="{% static 'core/img/slidertierra.jpg'%}" class="d-block w-100" alt="Tierra de hoja">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>Tierra de hoja a 3x1</h5>
@@ -79,7 +79,7 @@
       </div>
       <div class="carousel-item">
         <a href="macetero.html">
-          <img src="img/slidermacetero.jpg" class="d-block w-100" alt="Macetero">
+          <img src="{% static 'core/img/slidermacetero.jpg'%}" class="d-block w-100" alt="Macetero">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>Maceteros a 2x1</h5>
@@ -88,7 +88,7 @@
       </div>
       <div class="carousel-item">
         <a href="flores.html">
-          <img src="img/sliderflores.jpg" class="d-block w-100" alt="Ramos de flores">
+          <img src="{% static 'core/img/sliderflores.jpg'%}" class="d-block w-100" alt="Ramos de flores">
         </a>
         <div class="carousel-caption d-none d-md-block">
           <h5>Ramos de flores con 50% de descuento</h5>
@@ -113,7 +113,7 @@
           
             <article>
               <a href="flores.html">
-                <img src="img/catflor.jpg">
+                <img src="{% static 'core/img/catflor.jpg'%}">
               </a>
               <h4>Flores</h4>
               <p>Aqui encontraras todas las flores para decorar tu jardin y/o casa.</p>
@@ -121,7 +121,7 @@
           
           <article>
             <a href="macetero.html">
-              <img src="img/catmacetero.jpg">
+              <img src="{% static 'core/img/catmacetero.jpg'%}">
             </a>
               <h4>Macetero</h4>
               <p>Mantén bien cuidadas tus flores y plantas sin tener que preocuparte del riego diario</p>
@@ -129,7 +129,7 @@
           
           <article>
             <a href="tierradehoja.html">
-              <img src="img/cattierra.jpg">
+              <img src="{% static 'core/img/cattierra.jpg'%}">
             </a>
               <h4>Tierra de Hoja</h4>
               <p>Cuentan con una fórmula especial para el cultivo de todas las variedades de esta especie y para plantas suculentas en general.</p>
