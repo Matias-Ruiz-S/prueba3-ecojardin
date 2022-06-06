@@ -7,8 +7,8 @@ from .views import tierradehoja
 
 urlpatterns = [
     path('', home,name="home"),
-    path('', contacto,name="contacto"),
-    path('', flores,name="flores"),
-    path('', macetero,name="macetero"),
-    path('', tierradehoja,name="tierradehoja"),
+    path('contacto.html', contacto,name="contacto"),
+    path('flores.html', flores,name="flores"),
+    path('macetero.html', macetero,name="macetero"),
+    path('tierradehoja.html', tierradehoja,name="tierradehoja"),
 ]
