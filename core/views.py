@@ -1,35 +1,62 @@
 from django.shortcuts import render
 from .models import Producto
+from .forms import ProductoForm
 
 # Create your views here.
 
 def home(request):
+    Productos = Producto.objects.all()
+    datos = {
+        'producto': Producto
+    }
     
-    return render(request, 'core/index.html')
+    return render(request, 'core/index.html', datos)
 
-def contacto(request):
-    
+def contacto(request):  
     return render(request, 'core/contacto.html')
 
 def flores(request):
-    flores = Producto.objects.all()
-    datos ={
-        'flores': flores
+    datos = {
+        'flores': ProductoForm()
     }
-    return render(request, 'core/flores.html', datos)
+    if request.method == 'POST':
+        formulario = ProductoForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Datos guardados correctamente"
+
+    return render(request, 'core/form_producto.html', datos)
 
 def macetero(request):
-    macetero = Producto.objects.all()
-    datos ={
-        'macetero': macetero
+   datos = {
+        'macetero': ProductoForm()
     }
-    
-    return render(request, 'core/macetero.html', datos)
+   if request.method == 'POST':
+        formulario = ProductoForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Datos guardados correctamente"
+            return render(request, 'core/form_producto.html', datos)
+
 
 def tierradehoja(request):
-    tierradehoja= Producto.objects.all()
-    datos ={
-        'tierra de hoja': tierradehoja
+   datos = {
+        'tierradehoja': ProductoForm()
     }
-    
-    return render(request, 'core/tierradehoja.html', datos)
+   if request.method == 'POST':
+        formulario = ProductoForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Datos guardados correctamente"
+            return render(request, 'core/form_producto.html', datos)
+
+def form_producto(request):
+       datos = {
+        'form_producto': ProductoForm()
+    }
+       if request.method == 'POST':
+        formulario = ProductoForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Datos guardados correctamente"
+            return render(request, 'core/form_producto.html', datos)

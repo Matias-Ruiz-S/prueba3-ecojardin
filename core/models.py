@@ -12,8 +12,8 @@ def __str__(self):
 
 
 class Producto(models.Model):
-    sku = models.CharField(max_length=12, primary_key=True, verbose_name='SKU')
-    nombreProducto = models.CharField(max_length=20, verbose_name='Nombre del producto')
-    precio = models.CharField(max_length=20, verbose_name='Precio')
+    SKU = models.CharField(max_length=12, primary_key=True, verbose_name='SKU')
+    Nombredelproducto = models.CharField(max_length=20, verbose_name='Nombre del producto')
+    Precio = models.CharField(max_length=20, verbose_name='Precio')
     Stock = models.CharField(max_length=20, null=True, blank=True, verbose_name='Stock disponible')
-    Categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    CategoriaId = models.ForeignKey(Categoria, on_delete=models.CASCADE)
