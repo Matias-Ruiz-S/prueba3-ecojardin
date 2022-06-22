@@ -25,31 +25,33 @@ def flores(request):
             formulario.save()
             datos['mensaje'] = "Datos guardados correctamente"
 
-    return render(request, 'core/form_producto.html', datos)
+    return render(request, 'core/flores.html', datos)
 
 def macetero(request):
-   datos = {
+    datos = {
         'macetero': ProductoForm()
     }
-   if request.method == 'POST':
+    if request.method == 'POST':
         formulario = ProductoForm(request.POST)
         if formulario.is_valid:
             formulario.save()
             datos['mensaje'] = "Datos guardados correctamente"
-            return render(request, 'core/form_producto.html', datos)
+            
+    return render(request, 'core/macetero.html', datos)
 
 
 def tierradehoja(request):
-   datos = {
+    datos = {
         'tierradehoja': ProductoForm()
     }
 
-   if request.method == 'POST':
+    if request.method == 'POST':
         formulario = ProductoForm(request.POST)
         if formulario.is_valid:
             formulario.save()
             datos['mensaje'] = "Datos guardados correctamente"
-            return render(request, 'core/form_producto.html', datos)
+            
+    return render(request, 'core/tierradehoja.html', datos)
 
 def form_producto(request):
        datos = {
