@@ -17,3 +17,6 @@ class Producto(models.Model):
     Precio = models.CharField(max_length=20, verbose_name='Precio')
     Stock = models.CharField(max_length=20, null=True, blank=True, verbose_name='Stock disponible')
     CategoriaId = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    
+class Suscripcion(models.Model):
+    
